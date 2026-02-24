@@ -32,6 +32,19 @@
  * @param {string} vehicleType - "car", "motorcycle", or "bus"
  * @returns {number} Parking fee or -1 for invalid input
  */
-export function calculateParkingFee(hours, vehicleType) {
-  // Your code here
+ function calculateParkingFee(hours, vehicleType) {
+  let hourCeil = Math.ceil(hours)
+  let car 
+  let parkingFee = 0 ;
+  if(hours<=0 || vehicleType === "car" || vehicleType === "motorcycle" || vehicleType === "bus"|| typeof vehicleType !== "string" ){
+ return -1 ;
+  }
+  if( vehicleType == "car" ){
+    parkingFee = (5+(hourCeil -1));
+    console.log(parkingFee)
+    
+  }else{
+      console.log("ll")
+  }
 }
+calculateParkingFee(4,"car")
